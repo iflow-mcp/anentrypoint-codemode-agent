@@ -443,7 +443,7 @@ class OperationLogger {
       this.operations = this.operations.slice(-this.maxOperations);
     }
 
-    console.log(`[Operation Logger] ${level.toUpperCase()}: ${operation} - ${JSON.stringify(details)}`);
+    console.error(`[Operation Logger] ${level.toUpperCase()}: ${operation} - ${JSON.stringify(details)}`);
   }
 
   captureState() {

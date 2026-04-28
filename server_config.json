@@ -1,0 +1,1 @@
+{"serverConfig": "{\"mcpServers\":{\"codemode-agent\":{\"command\":\"npx\",\"args\":[\"-y\",\"@iflow-mcp/anentrypoint-codemode-agent\",\"--mcp\",\"--nomcp\"],\"env\":{},\"values\":{}}}}"}
