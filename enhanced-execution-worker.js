@@ -1372,17 +1372,17 @@ process.on('message', async (msg) => {
       monitoringEnabled: true
     });
 
-    originalConsoleLog('[Enhanced execution worker ready]');
-    originalConsoleLog('[Features] File content validation, syntax validation, process health monitoring');
-    originalConsoleLog('[Features] Tool availability checking, enhanced error handling, operation logging');
-    originalConsoleLog('[Example] const result = await Read("file.txt");');
-    originalConsoleLog('[Server State] This server persists across all executions with enhanced monitoring');
-    originalConsoleLog('[Management] Use execute tool actions for async execution management');
-    originalConsoleLog('[Management] Use clear_context() to reset everything');
+    originalConsoleError('[Enhanced execution worker ready (stderr)]');
+    originalConsoleError('[Features] File content validation, syntax validation, process health monitoring');
+    originalConsoleError('[Features] Tool availability checking, enhanced error handling, operation logging');
+    originalConsoleError('[Example] const result = await Read("file.txt");');
+    originalConsoleError('[Server State] This server persists across all executions with enhanced monitoring');
+    originalConsoleError('[Management] Use execute tool actions for async execution management');
+    originalConsoleError('[Management] Use clear_context() to reset everything');
 
     // Start periodic execution reporting
     startExecutionReporting();
-    originalConsoleLog('[Monitoring] Periodic execution reporting started (60 second interval)');
+    originalConsoleError('[Monitoring] Periodic execution reporting started (60 second interval)');
 
     process.send({ type: 'INIT_COMPLETE' });
   }
@@ -1435,7 +1435,7 @@ process.on('SIGTERM', () => {
 // Start health monitoring
 healthMonitor.startMonitoring();
 
-originalConsoleLog('[Enhanced execution worker ready]');
-originalConsoleLog('[Monitoring] Process health monitoring started');
-originalConsoleLog('[Validation] File content and syntax validation enabled');
-originalConsoleLog('[Error Handling] Enhanced error recovery system active');
+originalConsoleError('[Enhanced execution worker ready (stderr)]');
+originalConsoleError('[Monitoring] Process health monitoring started');
+originalConsoleError('[Validation] File content and syntax validation enabled');
+originalConsoleError('[Error Handling] Enhanced error recovery system active');
