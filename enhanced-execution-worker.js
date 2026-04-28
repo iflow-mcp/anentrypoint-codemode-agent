@@ -1418,7 +1418,7 @@ global.__callMCPTool = async (serverName, toolName, args) => {
 
 process.on('SIGINT', () => {
   operationLogger.log('SIGINT_RECEIVED');
-  originalConsoleLog('[Enhanced execution worker] Received SIGINT, shutting down...');
+  originalConsoleError('[Enhanced execution worker] Received SIGINT, shutting down...');
   healthMonitor.stopMonitoring();
   stopExecutionReporting();
   process.exit(0);
@@ -1426,7 +1426,7 @@ process.on('SIGINT', () => {
 
 process.on('SIGTERM', () => {
   operationLogger.log('SIGTERM_RECEIVED');
-  originalConsoleLog('[Enhanced execution worker] Received SIGTERM, shutting down...');
+  originalConsoleError('[Enhanced execution worker] Received SIGTERM, shutting down...');
   healthMonitor.stopMonitoring();
   stopExecutionReporting();
   process.exit(0);
